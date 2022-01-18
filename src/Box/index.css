@@ -1,9 +1,11 @@
 .box {
-    border: 2px solid rgb(85, 85, 85);
-    height: 500px;
-    width: 800px;
+    border: 3px solid rgb(85, 85, 85);
+    height: 400px;
+    width: 600px;
     border-radius: 10px;
     margin-top: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: content-box;
 }
