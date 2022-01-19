@@ -17,9 +17,16 @@ export default function Search(props) {
         document.querySelector('.searchText').value = ''
     }
 
+    var handleKeyUp = (e) => {
+        // console.dir(e);
+
+        if (e.keyCode === 13) {
+            handleCommit()
+        }
+    }
     return (
         <div id='searchBox'>
-            <input type="text" name="" className='searchText' placeholder='请输入事项' />
+            <input type="text" name="" className='searchText' placeholder='请输入事项' onKeyUp={handleKeyUp} />
             <button className='search-btn' onClick={handleCommit}>Add</button>
         </div>
     )
