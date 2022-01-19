@@ -5,10 +5,16 @@ import './index.css'
 export default function Search(props) {
 
     var handleCommit = () => {
+
         // console.log(props)
         let val = document.querySelector('.searchText').value
+        if (val === '') {
+            alert('请输入事项！')
+            return
+        }
         props.addData(val)
         // console.dir(val)
+        document.querySelector('.searchText').value = ''
     }
 
     return (

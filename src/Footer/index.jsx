@@ -2,11 +2,11 @@ import React from 'react'
 
 import './index.scss';
 
-export default function Footer() {
+export default function Footer(props) {
     return (
         <div id='footer'>
-            <button className='selectAll'>全选</button>
-            <button className='del'>删除</button>
+            <button className='selectAll' onClick={props.selectAll}>全选</button>
+            <button className='del' onClick={props.deleteData}>删除</button>
         </div >
     )
 }
